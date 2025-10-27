@@ -14,7 +14,12 @@ function BookApi(){
 
     const srchBook = ()=> {
         const ftr = books.filter((data)=>( data.title.toLowerCase().includes(searchtext.toLowerCase())))
-        setfilterbook(ftr)
+        if(ftr.length > 0){
+            setfilterbook(ftr)
+        }else{
+            alert('No Book Found')
+        }
+        
     }
 
 
